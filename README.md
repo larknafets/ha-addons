@@ -1,4 +1,4 @@
-# Stefan's Assistant Add-ons
+# Stefan's Home Assistant Add-ons
 
 ## About
 
