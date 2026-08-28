@@ -1,0 +1,83 @@
+name: Validate Add-ons
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      changedAddons: ${{ steps.detect.outputs.changed_addons }}
+      repositoryYamlChanged: ${{ steps.detect.outputs.repository_yaml_changed }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Detect changed add-ons and repository.yaml
+        id: detect
+        run: |
+          set -euo pipefail
+
+          base=$(.github/scripts/resolve-base-ref.sh \
+            "${{ github.event_name }}" \
+            "${{ github.event.pull_request.base.sha }}" \
+            "${{ github.event.before }}")
+          head="${{ github.sha }}"
+
+          changed_addons=$(.github/scripts/detect-changed-addons.sh "$base" "$head")
+          echo "changed_addons=${changed_addons}" >> "$GITHUB_OUTPUT"
+
+          if git diff --name-only "$base" "$head" | grep -qx repository.yaml; then
+            echo "repository_yaml_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "repository_yaml_changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  lint-addons:
+    name: Lint ${{ matrix.addon }}
+    needs: detect-changes
+    if: needs.detect-changes.outputs.changedAddons != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        addon: ${{ fromJSON(needs.detect-changes.outputs.changedAddons) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Add-on schema lint
+        uses: frenck/action-addon-linter@b9cfd1bc62ba60d2c4fc96317b5f7ada5923f4a7 # v2
+        with:
+          path: "./${{ matrix.addon }}"
+          community: false
+
+      - name: Extract image and version from config.yaml
+        id: info
+        run: |
+          set -euo pipefail
+          info=$(.github/scripts/extract-addon-image.sh "${{ matrix.addon }}")
+          echo "image=$(jq -r .image <<< "$info")" >> "$GITHUB_OUTPUT"
+          echo "version=$(jq -r .version <<< "$info")" >> "$GITHUB_OUTPUT"
+
+      - name: Verify referenced image manifest exists
+        run: docker manifest inspect "${{ steps.info.outputs.image }}:${{ steps.info.outputs.version }}" > /dev/null
+
+  lint-repository-yaml:
+    name: Lint repository.yaml
+    needs: detect-changes
+    if: needs.detect-changes.outputs.repositoryYamlChanged == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Validate repository.yaml is well-formed YAML
+        run: ruby -ryaml -e "YAML.load_file('repository.yaml')"
