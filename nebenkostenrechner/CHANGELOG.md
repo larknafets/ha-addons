@@ -1,5 +1,13 @@
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## [v0.3.0] - 2026-09-01
+
+## Changelog
+* Point hassio release job at the renamed ha-addons slug (#52)
+* Rename project: nebenkosten-energierechner -> nebenkostenrechner (#51)
+
+
+
 ## [v0.2.2] - 2026-09-01
 
 ## Changelog
