@@ -1,5 +1,12 @@
 Full release details: https://github.com/larknafets/nebenkosten-energierechner/releases
 
+## [v0.2.1] - 2026-09-01
+
+## Changelog
+* Fix UpdatePeriod silently dropping meter readings and occupancy for gaps
+
+
+
 ## [v0.2.0] - 2026-09-01
 
 ## Changelog
