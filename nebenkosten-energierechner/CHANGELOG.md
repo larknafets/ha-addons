@@ -1,5 +1,12 @@
 Full release details: https://github.com/larknafets/nebenkosten-energierechner/releases
 
+## [v0.1.5] - 2026-09-01
+
+## Changelog
+* Fix missing price/Personen prefill when correcting the oldest Ablesung, add Einspeisung tracking (#47)
+
+
+
 ## [v0.1.4] - 2026-09-01
 
 ## Changelog
