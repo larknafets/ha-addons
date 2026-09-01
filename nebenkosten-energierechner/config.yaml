@@ -1,5 +1,5 @@
 name: Nebenkosten-Energierechner
-version: "0.1.3"
+version: "0.1.4"
 slug: nebenkosten-energierechner
 description: Monatliche Nebenkostenabrechnung (Strom, Heizung/Warmwasser, Wasser) für ein Zweifamilienhaus mit Wärmepumpe und PV-Anlage
 url: https://github.com/larknafets/nebenkosten-energierechner

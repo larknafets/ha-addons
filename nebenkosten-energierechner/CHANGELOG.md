@@ -1,5 +1,14 @@
 Full release details: https://github.com/larknafets/nebenkosten-energierechner/releases
 
+## [v0.1.4] - 2026-09-01
+
+## Changelog
+* Allow editing/deleting any Ablesung, add Ablesungen-Übersicht (#41, #43, #44, #45)
+* Show Zeitraum on Ablesung detail, unify nav link sizing, rename Dashboard link
+* Turn "Neue Ablesung erfassen" and "korrigieren" into buttons, scope "Wie wird gerechnet?" to Dashboard (#46)
+
+
+
 ## [v0.1.3] - 2026-09-01
 
 ## Changelog
