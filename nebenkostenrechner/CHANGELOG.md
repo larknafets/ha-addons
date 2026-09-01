@@ -1,4 +1,4 @@
-Full release details: https://github.com/larknafets/nebenkosten-energierechner/releases
+Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
 ## [v0.2.2] - 2026-09-01
 
