@@ -10,4 +10,6 @@ init: false
 image: ghcr.io/larknafets/nebenkosten-energierechner
 ingress: true
 ingress_port: 8080
+panel: true
+panel_title: "Nebenkosten"
 panel_icon: mdi:cash-multiple
