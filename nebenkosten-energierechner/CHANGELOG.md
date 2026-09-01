@@ -1,5 +1,12 @@
 Full release details: https://github.com/larknafets/nebenkosten-energierechner/releases
 
+## [v0.1.3] - 2026-09-01
+
+## Changelog
+* Allow arbitrary decimal precision in Ablesung form inputs
+
+
+
 ## [v0.1.2] - 2026-09-01
 
 ## Changelog
