@@ -19,7 +19,7 @@ Add this repository to your Home Assistant instance:
 [![Add repository to your Home Assistant instance][ha-badge]][ha-url]
 
 Or manually: **Settings → Add-ons → Add-on Store → ⋮ → Repositories**, then add:
-`https://github.com/larknafets/gcs-ha-addons`
+`https://github.com/larknafets/ha-addons`
 
 [ha-badge]: https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg
-[ha-url]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Flarknafets%2Fgcs-ha-addons
+[ha-url]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Flarknafets%2Fha-addons
