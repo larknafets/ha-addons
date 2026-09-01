@@ -1,5 +1,14 @@
 Full release details: https://github.com/larknafets/nebenkosten-energierechner/releases
 
+## [v0.2.2] - 2026-09-01
+
+## Changelog
+* Add CSV export (#53) and bootstrap CSV import (#54) for Ablesungen
+* Show WP-Strom kWh in Heizungskosten and PV-Anteil in Stromkosten (#50)
+* Show Zeitraum alongside Ablesedatum in the overview and detail dropdown
+
+
+
 ## [v0.2.1] - 2026-09-01
 
 ## Changelog
