@@ -1,5 +1,16 @@
 Full release details: https://github.com/larknafets/nebenkosten-energierechner/releases
 
+## [v0.1.2] - 2026-09-01
+
+## Changelog
+* Add Ablesung-Korrektur, Dashboard-Link, deutsche Zahlenformate (#34, #35, #36)
+* Add Verlauf EUR/Verbrauch-Umschalter (#39)
+* Add fixed tooltip for Verlauf bar segments too narrow to show EUR text
+* Round consumption to max 2 decimals, pad EUR to always 2, unhardcode QM seed (#37, #38, #40)
+* Run container as root, not distroless nonroot
+
+
+
 ## [v0.1.1] - 2026-08-29
 
 ## Changelog
