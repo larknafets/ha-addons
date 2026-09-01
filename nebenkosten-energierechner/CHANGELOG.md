@@ -1,5 +1,15 @@
 Full release details: https://github.com/larknafets/nebenkosten-energierechner/releases
 
+## [v0.2.0] - 2026-09-01
+
+## Changelog
+* Add Docker/HA-Add-on installation section to README, update Tech-Stack
+* Add System/Hell/Dunkel theme toggle and dashboard version badge (#48, #49)
+* Document Einspeisung (PV feed-in) in README and Berechnungslogik page
+* Move Ablesung-Korrektur date-neighbor check into store.UpdatePeriod
+
+
+
 ## [v0.1.5] - 2026-09-01
 
 ## Changelog
