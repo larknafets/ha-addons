@@ -1,5 +1,25 @@
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## [v0.4.0] - 2026-09-03
+
+## Changelog
+* docs: add Fixkosten domain terms to CONTEXT.md (#60)
+* docs: rename Wohnfläche to Wohnungsgröße for consistency with Flurstücksgröße
+* docs: update Berechnungslogik page and README for Fixkosten (#59)
+* feat: add /fixkosten CRUD (#60)
+* feat: add Fixkosten data model (#60)
+* feat: add Fixkosten split calculation (#60)
+* feat: add Stammdaten page for Wohnungsgröße/Flurstücksgröße (#61)
+* feat: consistent top nav on every page (prototype-style)
+* feat: manage Kostenpositionen-Jahre on /stammdaten (#60)
+* feat: redesign Dashboard with Jahressummen and 4-Modus Monatsverlauf (#60)
+* fix: Monatsverlauf bar-segments/text stayed invisible in every mode
+* fix: split Wärmepumpe-Strom kWh per Wohnung in Heizungskosten table
+* refactor: address code review findings for #60
+* refactor: dedupe stammdaten form parsing, align on Wohnfläche wording
+
+
+
 ## [v0.3.0] - 2026-09-01
 
 ## Changelog
