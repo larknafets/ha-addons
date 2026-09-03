@@ -1,5 +1,12 @@
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## [v0.5.1] - 2026-09-03
+
+## Changelog
+* fix: Fixkosten jährlich-Werte blank due to invalid number-input value, sync stale Kostenposition labels
+
+
+
 ## [v0.5.0] - 2026-09-03
 
 ## Changelog
