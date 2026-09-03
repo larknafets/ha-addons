@@ -1,5 +1,14 @@
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## [v0.6.0] - 2026-09-03
+
+## Changelog
+* feat: show PV-Anteil in Wallboxen Jahressummen-Karte
+* feat: show actual kWh instead of billed-only values in Dashboard Verbrauchswerte/Wallbox
+* refactor: remove redundant kpi-strip boxes from Dashboard tab panels
+
+
+
 ## [v0.5.1] - 2026-09-03
 
 ## Changelog
