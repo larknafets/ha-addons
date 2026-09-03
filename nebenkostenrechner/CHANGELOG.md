@@ -1,5 +1,13 @@
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## [v0.5.0] - 2026-09-03
+
+## Changelog
+* feat: add Wallbox/PV-Anlage Dashboard entities, unify page nav (#67)
+* refactor: bundle Wallbox/PV-Anlage series identity into simpleSeries
+
+
+
 ## [v0.4.0] - 2026-09-03
 
 ## Changelog
