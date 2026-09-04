@@ -1,5 +1,22 @@
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## [v0.7.0] - 2026-09-04
+
+## Changelog
+* docs: Zähler-Verschachtelung und PV-Verrechnungskaskade als Schaubild
+* feat: Ingress-freie Widget-Routen für Home-Assistant-Dashboards
+* feat: icon badges for Wohnungsgröße/Flurstück/Personen, German thousands separator
+* feat: legend follows active Monatsverlauf-Modus, colored Verbrauchswerte
+* feat: pad Verbrauchswerte to exactly 2 decimal places
+* feat: show Flurstücksgröße-Badge and Personen-Schnitt on Jahressummen-Karte
+* feat: show absolute diff to previous Ablesung on Zähler table
+* fix: show actual kWh in Dashboard Verbrauchswerte instead of PV-capped billed anteil
+* style: Jahressummen-Karten Kategorie-Zeilen mit Icon statt Text, farblich passend
+* style: Wallboxen/PV-Anlage Jahresübersicht-Verbrauchswerte ohne Nachkommastellen
+* style: bold card titles on Jahressummen-Übersicht
+
+
+
 ## [v0.6.0] - 2026-09-03
 
 ## Changelog
