@@ -12,3 +12,7 @@ ingress: true
 ingress_port: 8080
 panel_title: "Nebenkosten"
 panel_icon: mdi:cash-multiple
+ports:
+  8081/tcp: 8081
+ports_description:
+  8081/tcp: "Read-only Widget-Routen (/widget/jahressumme/{entity}, /widget/verbrauchswerte/{entity}) für Lovelace Webpage-Card-Iframes, ohne Login - siehe DOCS.md"
