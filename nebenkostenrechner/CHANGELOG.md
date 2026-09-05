@@ -1,5 +1,12 @@
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## [v0.8.1] - 2026-09-05
+
+## Changelog
+* fix: HA-Add-on-DB-Pfad wechselt auf addon_configs, mit Migration
+
+
+
 ## [v0.8.0] - 2026-09-05
 
 ## Changelog
