@@ -1,5 +1,5 @@
 name: Nebenkosten
-version: "0.8.0"
+version: "0.8.1"
 slug: nebenkostenrechner
 description: Monatliche Nebenkostenabrechnung (Strom, Heizung/Warmwasser, Wasser) für ein Zweifamilienhaus mit Wärmepumpe und PV-Anlage
 url: https://github.com/larknafets/nebenkostenrechner
@@ -8,6 +8,11 @@ arch:
   - aarch64
 init: false
 image: ghcr.io/larknafets/nebenkostenrechner
+map:
+  - type: addon_config
+    read_only: false
+environment:
+  DB_PATH: /config/nebenkosten.db
 ingress: true
 ingress_port: 8080
 panel_title: "Nebenkosten"
