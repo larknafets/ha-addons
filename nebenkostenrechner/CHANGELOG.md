@@ -1,5 +1,24 @@
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## [v0.8.0] - 2026-09-05
+
+## Changelog
+* docs: Widget-Routen im README dokumentieren
+* feat: Ablesungen einem Abrechnungsmonat zuordnen (#86)
+* feat: Update-Hinweis im Dashboard-Footer bei neuem GitHub-Release
+* feat: kombinierte HA-Widget-Übersicht (Jahressumme + Verbrauchswerte)
+* fix: Container als nonroot-User statt root laufen lassen
+* fix: Monatsverlauf-Balken nie ueber 100%, Nav-Ruecklink nur auf Detailseiten
+* fix: Tausenderpunkt beim CSV-Import korrekt parsen (#87)
+* refactor: split handlers.go into modules, deduplicate Jahreszeile aggregation
+* style: "Jahressummen <jahr> laufend"-Zeile aus den Widgets entfernen
+* style: Button-Feinschliff Ablesungen/Fixkosten/Stammdaten
+* style: Diese-Praefix entfernen, Nav-Ruecklink auf Detailseiten, Abstaende angleichen
+* style: Kosten Wärmepumpe gesamt und Kosten Wallbox fett hervorheben
+* style: Neue-Eintrag-Buttons nach oben, schlichtere Beschriftung
+
+
+
 ## [v0.7.0] - 2026-09-04
 
 ## Changelog
