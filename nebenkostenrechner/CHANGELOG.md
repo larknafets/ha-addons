@@ -1,5 +1,37 @@
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## [v0.9.0] - 2026-09-06
+
+## Changelog
+* docs: ADR für Kostenpositionen-Verlagerung in die Fixkosten-Eingabe
+* feat: Fixkosten-Formular - alle 14 Positionen editierbar, vererbt vom Vormonat
+* feat: Guthaben/Nachzahlung-Anzeige und Abschlag-Reiter in HA-Widgets nachziehen
+* feat: Nebenkostenabschlag mit Guthaben/Nachzahlung-Anzeige
+* feat: PV-kWh-Zeile auf Wohnung-2-Karte (Nicht dem Netzbezug zugeordnet)
+* feat: Speichern-Buttons auf Stammdaten erst nach Änderung aktivieren
+* feat: fixkosten_werte um logik/typ erweitern, Backfill aus Stammdaten-Jahren
+* fix: Flurstücksgröße-Badge zeigt km² statt m² ab 1000 m²
+* fix: Guthaben-Saldo bei luckenhaftem Monat, Abstandshalter-Position
+* fix: Guthaben-Saldo ignoriert Monate ohne Fixkosten-Eingabe
+* fix: Nebenkostenabschlag auf Fixkosten-Detailseite anzeigen
+* fix: kein Zeilenumbruch zwischen Wert und Einheit (kWh/m²/m³/MWh/EUR)
+* fix: kein Zeilenumbruch zwischen Wert und € bei EUR-Anzeigen
+* refactor: AbschlagSaldo-Typ statt Betrag/Guthaben/Nachzahlung-Tripel
+* refactor: Jahr-Extraktion vereinheitlichen, abschlag-value-Block teilen
+* refactor: Monatsverlauf-Markup zwischen Dashboard und Widgets teilen
+* refactor: Saldo-Orchestrierung in buildEntityView bündeln
+* refactor: Stammdaten-Kostenpositionen aufräumen, kostenpositionen_jahre droppen
+* refactor: calc.Fixkosten liest Logik/Typ/Wert direkt aus der Eingabe
+* refactor: walkJahre durch generische gruppiereNachJahr ersetzen
+* revert: Flurstücksgröße km²-Umschaltung entfernen
+* style: "Endstand:"-Praefix aus Abschlag-Jahreszeile entfernen
+* style: Jahr-loeschen-Button rechts neben Speichern
+* style: Monatsverlauf-Modus-Buttons ueber die Legende, rechtsbuendig
+* style: PV-kWh-Zeile Wohnung 2 an Kategorien-Zeile anhängen statt eigene Zeile
+* style: Stammdaten nach Wohnungen in eigene Karten aufteilen
+
+
+
 ## [v0.8.1] - 2026-09-05
 
 ## Changelog
