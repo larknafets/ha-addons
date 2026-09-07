@@ -1,5 +1,35 @@
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## [v0.10.0] - 2026-09-07
+
+## Changelog
+* docs: Datenmodell aktualisieren, Nebenkostenabschlag dokumentieren
+* docs: Hinweis zu geteilter Demo-Session-Cookie bei lokalen Instanzen
+* docs: Issue-Nummern-Referenzen aus README entfernen
+* docs: README ueberarbeiten (Formulierungen, Einliegerwohnung-Kontext, Guthaben/Nachzahlung-Uebersicht)
+* docs: README-Einleitung präzisieren
+* docs: Teilstand-Feature in README dokumentieren
+* feat: Ablesung über den Wizard unvollständig anlegen (Teilstand)
+* feat: Demo-Datenbank bei jedem Demo-Login zurueckgesetzt
+* feat: Demo-Login schaltet auf separate, automatisch angelegte Demo-DB
+* feat: Demo-Login-Einstiegspunkt ohne LOGIN_PASSWORD + Demo-Banner
+* feat: Generator fuer 39 Monate realitaetsnahe Demo-Testdaten
+* feat: Store-Ebene für Teilstand - Preise nullable, Vollständigkeits-Query
+* feat: Teilstand ohne Login vervollständigen können
+* feat: Teilstand sichtbar machen - Anzeige + geführter Wizard
+* feat: optionales Login-Kennwort mit serverseitiger Berechtigungsdurchsetzung
+* fix: Abmelden-Link nicht mehr parallel zu Anmelden bei LOGIN_PASSWORD=""
+* fix: Dashboard-Permissions korrigieren, Ablesung-Erfassung ohne Login erlauben
+* fix: Login raeumt jeweils andere Session-Cookie symmetrisch ab
+* fix: leeres Dashboard fehlte UpdateAvailable/LatestVersion im Template-Data
+* refactor: DB-Auswahl je Request ueber Context statt fester NewMux-Variable
+* refactor: Demo/Echt-DB-Entscheidung als eigenen testbaren Seam extrahieren
+* refactor: Nav-Fakten (Base/IsLoggedIn/IsDemoSession/ShowLoginEntry) in navData buendeln
+* refactor: secret als bloßer String durch auth-Modul ersetzt
+* style: Reiter 4 umbenennen, Personen-Felder nach oben verschieben
+
+
+
 ## [v0.9.0] - 2026-09-06
 
 ## Changelog
