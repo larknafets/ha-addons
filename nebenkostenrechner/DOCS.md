@@ -8,6 +8,12 @@ Die App öffnet sich über Ingress direkt im Home-Assistant-Frontend. Daten (SQL
 
 Details zur Berechnungslogik: siehe [nebenkostenrechner README](https://github.com/larknafets/nebenkostenrechner#readme) oder den Reiter "Wie wird gerechnet?" in der App.
 
+## Login (optional)
+
+Standardmäßig ist die App offen - jeder mit Zugriff auf dieses Add-on-Panel kann alles sehen und bearbeiten. Optional per **Kennwort** absichern: unter Konfiguration → `login_password` ein Kennwort setzen. Leer lassen (Standard) deaktiviert den Login komplett.
+
+Ist ein Kennwort gesetzt, sieht ein nicht angemeldeter Besucher nur eingeschränkte, lesende Ansichten (z. B. nur Wohnung 2 auf dem Dashboard) - alle Eingabe-/Änderungs-Buttons sind ausgeblendet und die zugehörigen Aktionen serverseitig gesperrt. Über den "Login"-Link in der Navigation lässt sich das Kennwort eingeben, danach ist wieder alles wie gewohnt nutzbar.
+
 ## Dashboard-Widgets in Lovelace
 
 Für kleine, einzelne Karten im eigenen Dashboard (statt der ganzen App über Ingress) stellt das Add-on 3 read-only Routen auf einem eigenen Port bereit - **ohne Login**, da HA-Ingress-URLs sich nicht zuverlässig in ein Iframe einbetten lassen. Dieser Port ist standardmäßig nur im lokalen Netzwerk erreichbar, nicht übers Internet.

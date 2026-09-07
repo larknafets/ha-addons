@@ -13,6 +13,10 @@ map:
     read_only: false
 environment:
   DB_PATH: /config/nebenkosten.db
+options:
+  login_password: ""
+schema:
+  login_password: password?
 ingress: true
 ingress_port: 8080
 panel_title: "Nebenkosten"
