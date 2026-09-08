@@ -1,7 +1,7 @@
 name: Nebenkosten
 version: "0.10.0"
 slug: nebenkostenrechner
-description: Monatliche Nebenkostenabrechnung (Strom, Heizung/Warmwasser, Wasser) für ein Zweifamilienhaus mit Wärmepumpe und PV-Anlage
+description: Monatliche Nebenkostenabrechnung für ein Zweifamilienhaus mit Wärmepumpe und PV-Anlage
 url: https://github.com/larknafets/nebenkostenrechner
 arch:
   - amd64
@@ -24,4 +24,4 @@ panel_icon: mdi:cash-multiple
 ports:
   8081/tcp: 8081
 ports_description:
-  8081/tcp: "Read-only Widget-Routen (/widget/jahressumme/{entity}, /widget/verbrauchswerte/{entity}) für Lovelace Webpage-Card-Iframes, ohne Login - siehe DOCS.md"
+  8081/tcp: "Read-only Widget-Routen für Lovelace Webpage-Card-Iframes, ohne Login - siehe DOCS.md"

@@ -1,0 +1,13 @@
+---
+configuration:
+  login_password:
+    name: Login Password
+    description: >-
+      Optionally protect access with a password. Without a password,
+      visitors only see restricted, read-only views; logging in unlocks
+      all editing features. Leave empty (default) to disable the login
+      entirely.
+network:
+  8081/tcp: >-
+    Read-only widget routes for Lovelace webpage-card iframes,
+    no login required - see DOCS.md

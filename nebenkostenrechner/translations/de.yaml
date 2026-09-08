@@ -1,0 +1,13 @@
+---
+configuration:
+  login_password:
+    name: Login-Kennwort
+    description: >-
+      Optional per Kennwort absichern. Ohne Kennwort sehen Besucher nur
+      eingeschränkte, lesende Ansichten; nach Login sind alle
+      Bearbeitungsfunktionen freigeschaltet. Leer lassen (Standard)
+      deaktiviert den Login komplett.
+network:
+  8081/tcp: >-
+    Read-only Widget-Routen für Lovelace Webpage-Card-Iframes,
+    ohne Login - siehe DOCS.md
