@@ -23,3 +23,7 @@ Or manually: **Settings → Add-ons → Add-on Store → ⋮ → Repositories**,
 
 [ha-badge]: https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg
 [ha-url]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Flarknafets%2Fha-addons
+
+## Add-ons
+
+- [Nebenkostenrechner](nebenkostenrechner/README.md)
