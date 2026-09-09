@@ -10,4 +10,4 @@ configuration:
 network:
   8081/tcp: >-
     Read-only widget routes for Lovelace webpage-card iframes,
-    no login required - see DOCS.md
+    no login required - see documentation
