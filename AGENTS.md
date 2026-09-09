@@ -2,7 +2,7 @@
 
 ### Issue tracker
 
-GitHub Issues via `gh` CLI (larknafets/nebenkostenrechner). See `docs/agents/issue-tracker.md`.
+GitHub Issues via `gh` CLI (larknafets/ha-addons). See `docs/agents/issue-tracker.md`.
 
 ### Domain docs
 
@@ -18,3 +18,7 @@ Single-context: root `CONTEXT.md` + `docs/adr/`. See `docs/agents/domain.md`.
 ## Language convention
 - GitHub issue titles, bodies, and comments (map, tickets, resolution comments, everything on the tracker) are always written in German.
 - Commit messages for this project are always written in English.
+- Code comments (in .go, .html, and any other source file) are always written in English, regardless of the language used elsewhere in the ticket/commit for that change.
+- Markdown files meant for the end user (e.g. `README.md`, `CONTEXT.md`, `docs/adr/`, `docs/*.md` describing the product/domain) are always written in German.
+- Markdown files internal to development/tooling (e.g. `AGENTS.md`, `CLAUDE.md`, `docs/agents/`) are always written in English.
+- German text always uses proper Umlaute (ä, ö, ü, ß) - never the ae/oe/ue/ss ASCII substitutes.

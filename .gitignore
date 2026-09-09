@@ -1,0 +1,10 @@
+/dist/
+
+# Claude Code project settings/state - local to this machine, never shared
+/.claude/
+
+# local dev artifacts
+*.db
+*.log
+.env
+.DS_Store
