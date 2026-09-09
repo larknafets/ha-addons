@@ -1,5 +1,14 @@
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## [v0.10.1] - 2026-09-09
+
+## Changelog
+* Update AGENTS.md
+* feat: Zählerstand-Anzeige mit 3 Nachkommastellen
+* fix: Diagnose-Logging fuer Login-Kennwort-Auflösung ergänzen
+
+
+
 ## [v0.10.0] - 2026-09-07
 
 ## Changelog
