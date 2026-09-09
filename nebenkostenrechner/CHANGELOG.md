@@ -1,5 +1,14 @@
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## [v0.10.2] - 2026-09-09
+
+## Changelog
+* docs: Code-Kommentare durchgehend ins Englische uebersetzen
+* docs: Code-Kommentare immer auf Englisch festlegen
+* fix: Login-Kennwort ueber Supervisor-API statt options.json lesen
+
+
+
 ## [v0.10.1] - 2026-09-09
 
 ## Changelog
