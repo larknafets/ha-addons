@@ -1,5 +1,14 @@
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## [v0.11.0] - 2026-09-09
+
+## Changelog
+* docs: Reihenfolge der Sprachkonvention-Regeln anpassen
+* docs: Umlaute-Pflicht und MD-Sprachkonvention ergaenzen
+* feat: CSV Export/Import für Fixkosteneingaben (#132, #133)
+
+
+
 ## [v0.10.2] - 2026-09-09
 
 ## Changelog
