@@ -8,6 +8,7 @@ arch:
   - aarch64
 init: false
 image: ghcr.io/larknafets/nebenkostenrechner
+hassio_api: true
 map:
   - type: addon_config
     read_only: false
