@@ -4,14 +4,12 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
 ## v0.11.2 - 2026-09-11
 
-## Changelog
 ### Bug Fixes
 * Abschlag-Balken im Monatsverlauf auf Mobile umbrechen lassen
 
 
 ## v0.11.1 - 2026-09-10
 
-## Changelog
 
 ### Bug Fixes
 * Reihenfolge Bug-Fixes/New-Features im Changelog-Matching korrigieren
@@ -28,15 +26,18 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
 ## v0.11.0 - 2026-09-09
 
+
 ### New Features
 * CSV Export/Import fuer Fixkosteneingaben (#132, #133)
 
 ## v0.10.2 - 2026-09-09
 
+
 ### Bug Fixes
 * Login-Kennwort ueber Supervisor-API statt options.json lesen
 
 ## v0.10.1 - 2026-09-09
+
 
 ### New Features
 * Zaehlerstand-Anzeige mit 3 Nachkommastellen
@@ -48,6 +49,7 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 * AGENTS.md aktualisieren
 
 ## v0.10.0 - 2026-09-07
+
 
 ### New Features
 * Teilstand sichtbar machen - Anzeige + gefuehrter Wizard
@@ -73,6 +75,7 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 * DB-Auswahl je Request ueber Context statt fester NewMux-Variable
 
 ## v0.9.0 - 2026-09-06
+
 
 ### New Features
 * Fixkosten-Formular - alle 14 Positionen editierbar, vererbt vom Vormonat
@@ -104,10 +107,12 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
 ## v0.8.1 - 2026-09-05
 
+
 ### Bug Fixes
 * HA-Add-on-DB-Pfad wechselt auf addon_configs, mit Migration
 
 ## v0.8.0 - 2026-09-05
+
 
 ### New Features
 * Update-Hinweis im Dashboard-Footer bei neuem GitHub-Release
@@ -124,6 +129,7 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
 ## v0.7.0 - 2026-09-04
 
+
 ### New Features
 * Ingress-freie Widget-Routen fuer Home-Assistant-Dashboards
 * Icon-Badges fuer Wohnungsgroesse/Flurstueck/Personen, deutsches Tausendertrennzeichen
@@ -137,6 +143,7 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
 ## v0.6.0 - 2026-09-03
 
+
 ### New Features
 * PV-Anteil in Wallboxen-Jahressummen-Karte anzeigen
 * Tatsaechliche kWh statt nur abgerechneter Werte in Dashboard-Verbrauchswerte/Wallbox anzeigen
@@ -146,10 +153,12 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
 ## v0.5.1 - 2026-09-03
 
+
 ### Bug Fixes
 * Fixkosten jaehrlich-Werte leer durch ungueltigen Zahlen-Input-Wert - behoben, veraltete Kostenposition-Labels synchronisiert
 
 ## v0.5.0 - 2026-09-03
+
 
 ### New Features
 * Wallbox/PV-Anlage Dashboard-Entitaeten ergaenzen, Seiten-Navigation vereinheitlichen (#67)
@@ -158,6 +167,7 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 * Wallbox/PV-Anlage Serien-Identitaet in simpleSeries buendeln
 
 ## v0.4.0 - 2026-09-03
+
 
 ### New Features
 * Einheitliche obere Navigation auf jeder Seite (Prototyp-Stil)
@@ -178,11 +188,13 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
 ## v0.3.0 - 2026-09-01
 
+
 ### Other Changes
 * hassio-Release-Job auf den umbenannten ha-addons-Slug umstellen (#52)
 * Projekt umbenennen: nebenkosten-energierechner -> nebenkostenrechner (#51)
 
 ## v0.2.2 - 2026-09-01
+
 
 ### Other Changes
 * Zeitraum neben Ablesedatum in Uebersicht und Detail-Dropdown anzeigen
@@ -191,10 +203,12 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
 ## v0.2.1 - 2026-09-01
 
+
 ### Other Changes
 * UpdatePeriod verwirft bei Luecken still Zaehlerstaende und Belegung - behoben
 
 ## v0.2.0 - 2026-09-01
+
 
 ### Other Changes
 * Docker/HA-Add-on-Installationsabschnitt im README ergaenzen, Tech-Stack aktualisieren
@@ -204,10 +218,12 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
 ## v0.1.5 - 2026-09-01
 
+
 ### Other Changes
 * Fehlende Preis-/Personen-Vorbelegung bei Korrektur der aeltesten Ablesung behoben, Einspeisung-Tracking ergaenzt (#47)
 
 ## v0.1.4 - 2026-09-01
+
 
 ### Other Changes
 * "Neue Ablesung erfassen" und "korrigieren" zu Buttons machen, "Wie wird gerechnet?" auf Dashboard beschraenken (#46)
@@ -216,10 +232,12 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
 ## v0.1.3 - 2026-09-01
 
+
 ### Other Changes
 * Beliebige Nachkommastellen-Genauigkeit in Ablesung-Formularfeldern erlauben
 
 ## v0.1.2 - 2026-09-01
+
 
 ### Other Changes
 * Container als root statt distroless nonroot laufen lassen
@@ -229,6 +247,7 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 * Ablesung-Korrektur, Dashboard-Link und deutsche Zahlenformate ergaenzen (#34, #35, #36)
 
 ## v0.1.1 - 2026-08-29
+
 
 ### Other Changes
 * HA-Add-on-Repo (larknafets/ha-addons) bei Release aktualisieren
