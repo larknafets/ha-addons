@@ -2,9 +2,17 @@
 
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## v0.11.2 - 2026-09-11
+
+## Changelog
+### Bug Fixes
+* Abschlag-Balken im Monatsverlauf auf Mobile umbrechen lassen
+
+
 ## v0.11.1 - 2026-09-10
 
 ## Changelog
+
 ### Bug Fixes
 * Reihenfolge Bug-Fixes/New-Features im Changelog-Matching korrigieren
 ### Refactoring
@@ -14,22 +22,19 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 * Real- und Demo-Session auf gemeinsame sessionKind-Mechanik umstellen
 * GetPeriodDetails auf AllPeriodDetails-Hydration umstellen
 * GetFixkostenEingabeDetails auf AllFixkostenEingabenDetails-Hydration umstellen
-* CSV-Import/Export-Pipeline für Ablesungen und Fixkosten vereinheitlichen
+* CSV-Import/Export-Pipeline fuer Ablesungen und Fixkosten vereinheitlichen
 * AbschlagSaldo-Akkumulation aus buildDashboardVerlauf extrahieren
-
 
 
 ## v0.11.0 - 2026-09-09
 
 ### New Features
-* CSV Export/Import fuer Fixkosteneingaben (larknafets/nebenkostenrechner#132, larknafets/nebenkostenrechner#133)
-
+* CSV Export/Import fuer Fixkosteneingaben (#132, #133)
 
 ## v0.10.2 - 2026-09-09
 
 ### Bug Fixes
 * Login-Kennwort ueber Supervisor-API statt options.json lesen
-
 
 ## v0.10.1 - 2026-09-09
 
@@ -41,7 +46,6 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
 ### Other Changes
 * AGENTS.md aktualisieren
-
 
 ## v0.10.0 - 2026-09-07
 
@@ -67,7 +71,6 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 * secret als blosser String durch auth-Modul ersetzt
 * Nav-Fakten (Base/IsLoggedIn/IsDemoSession/ShowLoginEntry) in navData buendeln
 * DB-Auswahl je Request ueber Context statt fester NewMux-Variable
-
 
 ## v0.9.0 - 2026-09-06
 
@@ -99,28 +102,25 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 ### Other Changes
 * revert: Flurstuecksgroesse km²-Umschaltung entfernen
 
-
 ## v0.8.1 - 2026-09-05
 
 ### Bug Fixes
 * HA-Add-on-DB-Pfad wechselt auf addon_configs, mit Migration
 
-
 ## v0.8.0 - 2026-09-05
 
 ### New Features
 * Update-Hinweis im Dashboard-Footer bei neuem GitHub-Release
-* Ablesungen einem Abrechnungsmonat zuordnen (larknafets/nebenkostenrechner#86)
+* Ablesungen einem Abrechnungsmonat zuordnen (#86)
 * kombinierte HA-Widget-Uebersicht (Jahressumme + Verbrauchswerte)
 
 ### Bug Fixes
 * Monatsverlauf-Balken nie ueber 100%, Nav-Ruecklink nur auf Detailseiten
-* Tausenderpunkt beim CSV-Import korrekt parsen (larknafets/nebenkostenrechner#87)
+* Tausenderpunkt beim CSV-Import korrekt parsen (#87)
 * Container als nonroot-User statt root laufen lassen
 
 ### Refactoring
 * handlers.go in Module aufteilen, Jahreszeile-Aggregation entdoppeln
-
 
 ## v0.7.0 - 2026-09-04
 
@@ -135,7 +135,6 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 ### Bug Fixes
 * Tatsaechliche kWh in Dashboard-Verbrauchswerte statt PV-gedeckeltem abgerechnetem Anteil anzeigen
 
-
 ## v0.6.0 - 2026-09-03
 
 ### New Features
@@ -145,106 +144,93 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 ### Refactoring
 * Redundante KPI-Strip-Boxen aus Dashboard-Tab-Panels entfernen
 
-
 ## v0.5.1 - 2026-09-03
 
 ### Bug Fixes
 * Fixkosten jaehrlich-Werte leer durch ungueltigen Zahlen-Input-Wert - behoben, veraltete Kostenposition-Labels synchronisiert
 
-
 ## v0.5.0 - 2026-09-03
 
 ### New Features
-* Wallbox/PV-Anlage Dashboard-Entitaeten ergaenzen, Seiten-Navigation vereinheitlichen (larknafets/nebenkostenrechner#67)
+* Wallbox/PV-Anlage Dashboard-Entitaeten ergaenzen, Seiten-Navigation vereinheitlichen (#67)
 
 ### Refactoring
 * Wallbox/PV-Anlage Serien-Identitaet in simpleSeries buendeln
-
 
 ## v0.4.0 - 2026-09-03
 
 ### New Features
 * Einheitliche obere Navigation auf jeder Seite (Prototyp-Stil)
-* Dashboard mit Jahressummen und 4-Modus-Monatsverlauf neu gestalten (larknafets/nebenkostenrechner#60)
-* Kostenpositionen-Jahre auf /stammdaten verwalten (larknafets/nebenkostenrechner#60)
-* /fixkosten CRUD ergaenzen (larknafets/nebenkostenrechner#60)
-* Fixkosten-Aufteilungsberechnung ergaenzen (larknafets/nebenkostenrechner#60)
-* Fixkosten-Datenmodell ergaenzen (larknafets/nebenkostenrechner#60)
-* Stammdaten-Seite fuer Wohnungsgroesse/Flurstuecksgroesse ergaenzen (larknafets/nebenkostenrechner#61)
+* Dashboard mit Jahressummen und 4-Modus-Monatsverlauf neu gestalten (#60)
+* Kostenpositionen-Jahre auf /stammdaten verwalten (#60)
+* /fixkosten CRUD ergaenzen (#60)
+* Fixkosten-Aufteilungsberechnung ergaenzen (#60)
+* Fixkosten-Datenmodell ergaenzen (#60)
+* Stammdaten-Seite fuer Wohnungsgroesse/Flurstuecksgroesse ergaenzen (#61)
 
 ### Bug Fixes
 * Monatsverlauf-Balkensegmente/-Text blieben in jedem Modus unsichtbar - behoben
 * Waermepumpe-Strom kWh je Wohnung in Heizungskosten-Tabelle aufteilen
 
 ### Refactoring
-* Code-Review-Befunde zu larknafets/nebenkostenrechner#60 adressieren
+* Code-Review-Befunde zu #60 adressieren
 * Stammdaten-Formular-Parsing entdoppeln, auf Wohnflaeche-Wortwahl vereinheitlichen
-
 
 ## v0.3.0 - 2026-09-01
 
 ### Other Changes
-* hassio-Release-Job auf den umbenannten ha-addons-Slug umstellen (larknafets/nebenkostenrechner#52)
-* Projekt umbenennen: nebenkosten-energierechner -> nebenkostenrechner (larknafets/nebenkostenrechner#51)
-
+* hassio-Release-Job auf den umbenannten ha-addons-Slug umstellen (#52)
+* Projekt umbenennen: nebenkosten-energierechner -> nebenkostenrechner (#51)
 
 ## v0.2.2 - 2026-09-01
 
 ### Other Changes
 * Zeitraum neben Ablesedatum in Uebersicht und Detail-Dropdown anzeigen
-* CSV-Export (larknafets/nebenkostenrechner#53) und Bootstrap-CSV-Import (larknafets/nebenkostenrechner#54) fuer Ablesungen ergaenzen
-* WP-Strom kWh in Heizungskosten und PV-Anteil in Stromkosten anzeigen (larknafets/nebenkostenrechner#50)
-
+* CSV-Export (#53) und Bootstrap-CSV-Import (#54) fuer Ablesungen ergaenzen
+* WP-Strom kWh in Heizungskosten und PV-Anteil in Stromkosten anzeigen (#50)
 
 ## v0.2.1 - 2026-09-01
 
 ### Other Changes
 * UpdatePeriod verwirft bei Luecken still Zaehlerstaende und Belegung - behoben
 
-
 ## v0.2.0 - 2026-09-01
 
 ### Other Changes
 * Docker/HA-Add-on-Installationsabschnitt im README ergaenzen, Tech-Stack aktualisieren
 * Ablesung-Korrektur Datums-Nachbar-Pruefung nach store.UpdatePeriod verschoben
-* System/Hell/Dunkel-Theme-Umschalter und Dashboard-Versions-Badge ergaenzen (larknafets/nebenkostenrechner#48, larknafets/nebenkostenrechner#49)
+* System/Hell/Dunkel-Theme-Umschalter und Dashboard-Versions-Badge ergaenzen (#48, #49)
 * Einspeisung (PV-Einspeisung) im README und auf der Berechnungslogik-Seite dokumentieren
-
 
 ## v0.1.5 - 2026-09-01
 
 ### Other Changes
-* Fehlende Preis-/Personen-Vorbelegung bei Korrektur der aeltesten Ablesung behoben, Einspeisung-Tracking ergaenzt (larknafets/nebenkostenrechner#47)
-
+* Fehlende Preis-/Personen-Vorbelegung bei Korrektur der aeltesten Ablesung behoben, Einspeisung-Tracking ergaenzt (#47)
 
 ## v0.1.4 - 2026-09-01
 
 ### Other Changes
-* "Neue Ablesung erfassen" und "korrigieren" zu Buttons machen, "Wie wird gerechnet?" auf Dashboard beschraenken (larknafets/nebenkostenrechner#46)
+* "Neue Ablesung erfassen" und "korrigieren" zu Buttons machen, "Wie wird gerechnet?" auf Dashboard beschraenken (#46)
 * Zeitraum auf Ablesung-Detail anzeigen, Nav-Link-Groessen vereinheitlichen, Dashboard-Link umbenennen
-* Bearbeiten/Loeschen beliebiger Ablesungen erlauben, Ablesungen-Uebersicht ergaenzen (larknafets/nebenkostenrechner#41, larknafets/nebenkostenrechner#43, larknafets/nebenkostenrechner#44, larknafets/nebenkostenrechner#45)
-
+* Bearbeiten/Loeschen beliebiger Ablesungen erlauben, Ablesungen-Uebersicht ergaenzen (#41, #43, #44, #45)
 
 ## v0.1.3 - 2026-09-01
 
 ### Other Changes
 * Beliebige Nachkommastellen-Genauigkeit in Ablesung-Formularfeldern erlauben
 
-
 ## v0.1.2 - 2026-09-01
 
 ### Other Changes
 * Container als root statt distroless nonroot laufen lassen
-* Verbrauch auf max. 2 Nachkommastellen runden, EUR immer auf 2 auffuellen, QM-Seed nicht mehr hartkodiert (larknafets/nebenkostenrechner#37, larknafets/nebenkostenrechner#38, larknafets/nebenkostenrechner#40)
+* Verbrauch auf max. 2 Nachkommastellen runden, EUR immer auf 2 auffuellen, QM-Seed nicht mehr hartkodiert (#37, #38, #40)
 * Festen Tooltip fuer zu schmale Verlauf-Balkensegmente ergaenzen, die den EUR-Text nicht zeigen koennen
-* Verlauf EUR/Verbrauch-Umschalter ergaenzen (larknafets/nebenkostenrechner#39)
-* Ablesung-Korrektur, Dashboard-Link und deutsche Zahlenformate ergaenzen (larknafets/nebenkostenrechner#34, larknafets/nebenkostenrechner#35, larknafets/nebenkostenrechner#36)
-
+* Verlauf EUR/Verbrauch-Umschalter ergaenzen (#39)
+* Ablesung-Korrektur, Dashboard-Link und deutsche Zahlenformate ergaenzen (#34, #35, #36)
 
 ## v0.1.1 - 2026-08-29
 
 ### Other Changes
 * HA-Add-on-Repo (larknafets/ha-addons) bei Release aktualisieren
 * GoReleaser-Changelog/Release-Schritt ergaenzen, angelehnt an gcs-connector-evcc
-
 
