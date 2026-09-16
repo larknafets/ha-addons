@@ -6,12 +6,6 @@ Home Assistant allows anyone to create app (add-on) repositories to share their
 apps (add-ons) for Home Assistant easily. This repository is one of those repositories,
 providing extra Home Assistant add-ons for your installation.
 
-The primary goal of this repository is to provide an add-on to use Cloudflared.
-Additional add-ons might follow in the future.
-
-Please note that the repository has been moved to the
-organization [homeassistant-apps][github-org].
-
 ## Installation
 
 Add this repository to your Home Assistant instance:
