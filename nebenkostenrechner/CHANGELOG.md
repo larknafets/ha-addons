@@ -2,6 +2,21 @@
 
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## v0.12.0 - 2026-09-18
+
+### New Features
+* Update-Check bei Dashboard-Interaktion zusaetzlich zum Seitenaufruf
+* Breaking-Change-Marker (!) und Revert-Typ im Changelog unterstuetzen
+* Theme-Umschalter auf 1 Symbol mit Zyklus reduzieren
+* Streaming-Dienste, Sonstige Kosten und Logik Wohnung 1/2
+### Bug Fixes
+* fehlende schliessende Klammer im HA-Add-on-Changelog-jq beheben
+* doppelte "## Changelog"-Ueberschrift im HA-Add-on-Changelog entfernen
+* regexReplaceAll im Changelog-Format durch verfuegbare Template-Funktionen ersetzen
+### Other Changes
+* Create dependabot.yml for version updates
+
+
 ## v0.11.2 - 2026-09-11
 
 ### Bug Fixes
