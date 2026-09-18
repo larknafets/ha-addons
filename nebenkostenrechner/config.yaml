@@ -1,5 +1,5 @@
 name: Nebenkosten
-version: "main"
+version: "0.12.0"
 slug: nebenkostenrechner
 description: Monatliche Nebenkostenabrechnung für ein Zweifamilienhaus mit Wärmepumpe und PV-Anlage
 url: https://github.com/larknafets/nebenkostenrechner
