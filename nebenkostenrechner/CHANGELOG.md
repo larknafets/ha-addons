@@ -2,11 +2,33 @@
 
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## v0.13.0 - 2026-10-01
+
+### New Features
+* Wizard umsortiert, Stammdaten-Layout, Kontoinhaber (#178)
+* Wohnungsstatus, Mieter- und Vermieter-Angaben (#170)
+* Umlagefaehig-Flag und Strom-Flag einfuehren (#169)
+* Heizungs-Gewichtung als zentralen Wert fuehren (#172)
+* genau eine Eingabe je Monat erzwingen (#173)
+* Vollstaendigkeitspruefung mit Maengelliste (#174)
+* Seite /abrechnung mit Auswahl und Hinweisen (#176)
+* Jahresberechnung und Jahressaldo je Wohnung (#175)
+* A4-Layout, Anhang, Druck und Mobilansicht (#177)
+### Bug Fixes
+* einheitliche Zaehlernamen, Test fuer Kontoinhaber (#179)
+### Refactoring
+* Anteil je Wohnung an einer Stelle bestimmen (#183)
+* Stammdaten-Wrapper entfernen, eigene Datei (#180)
+* Reihenfolge-Pruefung fuer Datum und Monat vereinheitlichen (#181)
+* DELETE-Anweisungen im Demo-Reset als Literale (#171)
+* Rechenkerne von den Ladern trennen (#184)
+* Daten einmal laden (#182)
+
+
 ## v0.12.0 - 2026-09-18
 
 ### New Features
 * Update-Check bei Dashboard-Interaktion zusaetzlich zum Seitenaufruf
-* Breaking-Change-Marker (!) und Revert-Typ im Changelog unterstuetzen
 * Theme-Umschalter auf 1 Symbol mit Zyklus reduzieren
 * Streaming-Dienste, Sonstige Kosten und Logik Wohnung 1/2
 ### Bug Fixes
@@ -14,7 +36,9 @@ Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 * doppelte "## Changelog"-Ueberschrift im HA-Add-on-Changelog entfernen
 * regexReplaceAll im Changelog-Format durch verfuegbare Template-Funktionen ersetzen
 ### Other Changes
+* Changelog-Tooling: Breaking-Change-Marker (!) und Revert-Typ als eigene Gruppen unterstuetzen
 * Create dependabot.yml for version updates
+
 
 
 ## v0.11.2 - 2026-09-11
