@@ -81,3 +81,19 @@ jobs:
 
       - name: Validate repository.yaml is well-formed YAML
         run: ruby -ryaml -e "YAML.load_file('repository.yaml')"
+
+  # One check that is always reported, for the branch protection: the lint
+  # jobs above are skipped when nothing relevant changed and their names
+  # depend on the add-on, so they cannot be required themselves.
+  validate:
+    name: Validate
+    needs: [detect-changes, lint-addons, lint-repository-yaml]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail if a job failed or was cancelled
+        run: |
+          if [ "${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}" = "true" ]; then
+            echo "A validation job failed or was cancelled." >&2
+            exit 1
+          fi
