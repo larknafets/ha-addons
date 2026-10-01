@@ -21,3 +21,4 @@ Or manually: **Settings → Add-ons → Add-on Store → ⋮ → Repositories**,
 ## Add-ons
 
 - [Nebenkostenrechner](nebenkostenrechner/README.md)
+- [Nebenkostenrechner (Nightly)](nebenkostenrechner-nightly/README.md) - täglicher Stand von `main`, experimentell

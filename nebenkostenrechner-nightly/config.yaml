@@ -1,0 +1,30 @@
+name: Nebenkosten (Nightly)
+version: "0.12.0"
+slug: nebenkostenrechner-nightly
+stage: experimental
+description: Nightly-Stand von main - Monatliche Nebenkostenabrechnung für ein Zweifamilienhaus mit Wärmepumpe und PV-Anlage
+url: https://github.com/larknafets/nebenkostenrechner
+arch:
+  - amd64
+  - aarch64
+init: false
+image: ghcr.io/larknafets/nebenkostenrechner
+hassio_api: true
+map:
+  - type: addon_config
+    read_only: false
+environment:
+  DB_PATH: /config/nebenkosten.db
+options:
+  login_password: ""
+schema:
+  login_password: password?
+ingress: true
+ingress_port: 8080
+panel_title: "Nebenkosten (Nightly)"
+panel_icon: mdi:cash-multiple
+panel_admin: false
+ports:
+  8081/tcp: 8082
+ports_description:
+  8081/tcp: "Read-only Widget-Routen für Lovelace Webpage-Card-Iframes, ohne Login - siehe Dokumentation"
