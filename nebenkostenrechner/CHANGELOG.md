@@ -2,6 +2,17 @@
 
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## v0.13.1 - 2026-10-01
+
+### Bug Fixes
+* Stammdaten vor Abrechnung in der Navigation
+* Update-Punkt nur bei bekanntem Update zeigen
+* Hinweis ohne Daten zentrieren und mit Strich abschliessen
+* Release-Tag im HA-Spiegel nicht in GITHUB_REF_NAME uebergeben
+
+Full release notes: [v0.13.0...v0.13.1](https://github.com/larknafets/nebenkostenrechner/compare/v0.13.0...v0.13.1)
+
+
 ## v0.13.0 - 2026-10-01
 
 ### New Features
