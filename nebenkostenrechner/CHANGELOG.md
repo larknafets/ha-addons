@@ -2,6 +2,16 @@
 
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## v0.14.0 - 2026-10-02
+
+### New Features
+* Zeitraum auf volle Monate eingrenzen für Mieterwechsel
+### Bug Fixes
+* Von- und Bis-Monat nebeneinander statt untereinander
+
+Full release notes: [v0.13.1...v0.14.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.13.1...v0.14.0)
+
+
 ## v0.13.1 - 2026-10-01
 
 ### Bug Fixes
