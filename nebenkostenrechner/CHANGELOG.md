@@ -2,6 +2,14 @@
 
 Full release details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## v0.14.1 - 2026-10-02
+
+### New Features
+* Neuestes Release beim App-Start einmal abfragen
+
+Full release notes: [v0.14.0...v0.14.1](https://github.com/larknafets/nebenkostenrechner/compare/v0.14.0...v0.14.1)
+
+
 ## v0.14.0 - 2026-10-02
 
 ### New Features
