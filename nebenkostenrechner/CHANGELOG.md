@@ -1,323 +1,381 @@
 # Changelog
 
-Full release details: https://github.com/larknafets/nebenkostenrechner/releases
+Alle Release-Details: https://github.com/larknafets/nebenkostenrechner/releases
+
+## v0.14.2 - 2026-10-02
+
+
+### Fehlerkorrekturen
+
+- Ablesungen und Fixkosten-Details passen jetzt aufs Handy: der Zeitraum entfällt, die Logik steht unter der Position, das Badge "unvollständig" bricht um.
+
+
+Alle Änderungen im Vergleich: [v0.14.1...v0.14.2](https://github.com/larknafets/nebenkostenrechner/compare/v0.14.1...v0.14.2)
 
 ## v0.14.1 - 2026-10-02
 
-### New Features
-* Neuestes Release beim App-Start einmal abfragen
+### Verbesserungen
 
-Full release notes: [v0.14.0...v0.14.1](https://github.com/larknafets/nebenkostenrechner/compare/v0.14.0...v0.14.1)
+- Die App fragt beim Start einmal nach dem neuesten Release. Der Update-Punkt zeigt ein neues Release dadurch schon beim ersten Aufruf der Seite an
 
+Alle Änderungen im Vergleich: [v0.14.0...v0.14.1](https://github.com/larknafets/nebenkostenrechner/compare/v0.14.0...v0.14.1)
 
 ## v0.14.0 - 2026-10-02
 
-### New Features
-* Zeitraum auf volle Monate eingrenzen für Mieterwechsel
-### Bug Fixes
-* Von- und Bis-Monat nebeneinander statt untereinander
+### Neue Funktionen
 
-Full release notes: [v0.13.1...v0.14.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.13.1...v0.14.0)
+- Die Abrechnung lässt sich auf volle Monate eines Jahres eingrenzen, zum Beispiel für einen Mieterwechsel mitten im Jahr. Ein Häkchen "Abweichender Zeitraum" blendet Von- und Bis-Monat ein, der Standard bleibt das Kalenderjahr. Die Frist nach § 556 Abs. 3 BGB richtet sich nach dem Ende des gewählten Zeitraums (#189)
 
+### Verbesserungen
+
+- Von- und Bis-Monat stehen in der Abrechnung nebeneinander
+
+Alle Änderungen im Vergleich: [v0.13.1...v0.14.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.13.1...v0.14.0)
 
 ## v0.13.1 - 2026-10-01
 
-### Bug Fixes
-* Stammdaten vor Abrechnung in der Navigation
-* Update-Punkt nur bei bekanntem Update zeigen
-* Hinweis ohne Daten zentrieren und mit Strich abschliessen
-* Release-Tag im HA-Spiegel nicht in GITHUB_REF_NAME uebergeben
+### Verbesserungen
 
-Full release notes: [v0.13.0...v0.13.1](https://github.com/larknafets/nebenkostenrechner/compare/v0.13.0...v0.13.1)
+- In der Navigation steht "Stammdaten" jetzt vor "Abrechnung"
+- Der Hinweis "– keine Ablesung –" bzw. "– keine Fixkosten-Eingabe –" im Monatsverlauf steht mittig und endet mit einem Strich
 
+### Fehlerkorrekturen
+
+- Der Update-Punkt in der Fußzeile war immer zu sehen, auch ohne neues Release. Jetzt erscheint er nur noch, wenn ein Update bekannt ist
+- Das Add-on in Home Assistant zeigte nach einem Release teils die Version "main". Es zeigt wieder die richtige Versionsnummer
+
+Alle Änderungen im Vergleich: [v0.13.0...v0.13.1](https://github.com/larknafets/nebenkostenrechner/compare/v0.13.0...v0.13.1)
 
 ## v0.13.0 - 2026-10-01
 
-### New Features
-* Wizard umsortiert, Stammdaten-Layout, Kontoinhaber (#178)
-* Wohnungsstatus, Mieter- und Vermieter-Angaben (#170)
-* Umlagefaehig-Flag und Strom-Flag einfuehren (#169)
-* Heizungs-Gewichtung als zentralen Wert fuehren (#172)
-* genau eine Eingabe je Monat erzwingen (#173)
-* Vollstaendigkeitspruefung mit Maengelliste (#174)
-* Seite /abrechnung mit Auswahl und Hinweisen (#176)
-* Jahresberechnung und Jahressaldo je Wohnung (#175)
-* A4-Layout, Anhang, Druck und Mobilansicht (#177)
-### Bug Fixes
-* einheitliche Zaehlernamen, Test fuer Kontoinhaber (#179)
-### Refactoring
-* Anteil je Wohnung an einer Stelle bestimmen (#183)
-* Stammdaten-Wrapper entfernen, eigene Datei (#180)
-* Reihenfolge-Pruefung fuer Datum und Monat vereinheitlichen (#181)
-* DELETE-Anweisungen im Demo-Reset als Literale (#171)
-* Rechenkerne von den Ladern trennen (#184)
-* Daten einmal laden (#182)
+### Neue Funktionen
 
+- Neue Seite "Abrechnung": Jahresabrechnung je Wohnung mit Auswahl von Jahr und Wohnung, Ergebnis als Guthaben oder Nachzahlung, Hinweisen zur Frist, Anhang (Verbrauch, Heizung je Monat, Bezugsgrößen, Personen), A4-Druck und Mobilansicht (#175, #176, #177)
+- Vor der Abrechnung prüft die App, ob alle Daten da sind, und nennt bei Lücken jeden Mangel mit Link zum Beheben (#174)
+- Stammdaten: Wohnungsstatus ("Vermietung" oder "Eigennutzung"), Mieter- und Vermieter-Angaben, IBAN und Kontoinhaber (#170, #178)
+- Stammdaten: je Kostenposition das Flag "Umlagefähig", dazu "Stromverbrauch weiterberechnen" für Wohnung 2 (#169)
+- Die Heizungs-Gewichtung ist ein zentraler Wert in den Stammdaten statt je Ablesung (#172)
+
+### Verbesserungen
+
+- Der Ablesungs-Assistent hat eine neue Reihenfolge: Strom, Wärme, Wasser, bei Strom Netzbezug (1.8.0), Einspeisung (2.8.0), Wohnung 2, Wallboxen, Wärmepumpe. Alle Einheiten stehen in Klammern (#178)
+- Die Boxen der Stammdaten haben gleiche Abstände, das IBAN-Feld ist größer
+- Es gibt je Monat genau eine Fixkosten-Eingabe, ein doppelter Monat wird beim Speichern abgelehnt (#173)
+
+### Fehlerkorrekturen
+
+- Die Zählernamen sind überall einheitlich (#179)
+
+### Wartung
+
+- Beim ersten Start nach dem Update erweitert die App die Datenbank um die neuen Felder für Stammdaten und Abrechnung. Vorher eine Sicherung der Datenbank anlegen
+- Interne Aufräumarbeiten am Code ohne sichtbare Änderung
+
+Alle Änderungen im Vergleich: [v0.12.0...v0.13.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.12.0...v0.13.0)
 
 ## v0.12.0 - 2026-09-18
 
-### New Features
-* Update-Check bei Dashboard-Interaktion zusaetzlich zum Seitenaufruf
-* Theme-Umschalter auf 1 Symbol mit Zyklus reduzieren
-* Streaming-Dienste, Sonstige Kosten und Logik Wohnung 1/2
-### Bug Fixes
-* fehlende schliessende Klammer im HA-Add-on-Changelog-jq beheben
-* doppelte "## Changelog"-Ueberschrift im HA-Add-on-Changelog entfernen
-* regexReplaceAll im Changelog-Format durch verfuegbare Template-Funktionen ersetzen
-### Other Changes
-* Changelog-Tooling: Breaking-Change-Marker (!) und Revert-Typ als eigene Gruppen unterstuetzen
-* Create dependabot.yml for version updates
+### Neue Funktionen
 
+- Neue Kostenpositionen "Streaming-Dienste" und "Sonstige Kosten", dazu die Berechnungslogik "Wohnung 1" und "Wohnung 2" (Kosten vollständig einer Wohnung zugerechnet)
 
+### Verbesserungen
+
+- Der Update-Hinweis wird auch bei Bedienung des Dashboards geprüft, nicht nur beim Laden der Seite
+- Der Umschalter für das Farbschema ist ein einzelnes Symbol, das bei jedem Klick durch System, Hell und Dunkel wechselt
+
+Alle Änderungen im Vergleich: [v0.11.2...v0.12.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.11.2...v0.12.0)
 
 ## v0.11.2 - 2026-09-11
 
-### Bug Fixes
-* Abschlag-Balken im Monatsverlauf auf Mobile umbrechen lassen
+### Fehlerkorrekturen
 
+- Die Abschlag-Balken im Monatsverlauf brechen auf dem Smartphone jetzt um, statt über den Rand zu laufen
+
+Alle Änderungen im Vergleich: [v0.11.1...v0.11.2](https://github.com/larknafets/nebenkostenrechner/compare/v0.11.1...v0.11.2)
 
 ## v0.11.1 - 2026-09-10
 
+### Wartung
 
-### Bug Fixes
-* Reihenfolge Bug-Fixes/New-Features im Changelog-Matching korrigieren
-### Refactoring
-* handlers.go nach Konzepten aufteilen
-* Widget-Handler ueber gemeinsame resolveWidgetView buendeln
-* Teilstand-Erfasst-Status in eigenes Modul buendeln
-* Real- und Demo-Session auf gemeinsame sessionKind-Mechanik umstellen
-* GetPeriodDetails auf AllPeriodDetails-Hydration umstellen
-* GetFixkostenEingabeDetails auf AllFixkostenEingabenDetails-Hydration umstellen
-* CSV-Import/Export-Pipeline fuer Ablesungen und Fixkosten vereinheitlichen
-* AbschlagSaldo-Akkumulation aus buildDashboardVerlauf extrahieren
+- Interne Aufräumarbeiten am Code ohne sichtbare Änderung
 
+Alle Änderungen im Vergleich: [v0.11.0...v0.11.1](https://github.com/larknafets/nebenkostenrechner/compare/v0.11.0...v0.11.1)
 
 ## v0.11.0 - 2026-09-09
 
+### Neue Funktionen
 
-### New Features
-* CSV Export/Import fuer Fixkosteneingaben (#132, #133)
+- CSV-Export und CSV-Import für die Fixkosten-Eingaben (#132, #133)
+
+Alle Änderungen im Vergleich: [v0.10.2...v0.11.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.10.2...v0.11.0)
 
 ## v0.10.2 - 2026-09-09
 
+### Fehlerkorrekturen
 
-### Bug Fixes
-* Login-Kennwort ueber Supervisor-API statt options.json lesen
+- Das Login-Kennwort aus den Add-on-Optionen wird jetzt über die Supervisor-Schnittstelle gelesen. Vorher wurde es im Add-on nicht erkannt
+
+Alle Änderungen im Vergleich: [v0.10.1...v0.10.2](https://github.com/larknafets/nebenkostenrechner/compare/v0.10.1...v0.10.2)
 
 ## v0.10.1 - 2026-09-09
 
+### Verbesserungen
 
-### New Features
-* Zaehlerstand-Anzeige mit 3 Nachkommastellen
+- Zählerstände werden mit drei Nachkommastellen angezeigt
 
-### Bug Fixes
-* Diagnose-Logging fuer Login-Kennwort-Aufloesung ergaenzen
-
-### Other Changes
-* AGENTS.md aktualisieren
+Alle Änderungen im Vergleich: [v0.10.0...v0.10.1](https://github.com/larknafets/nebenkostenrechner/compare/v0.10.0...v0.10.1)
 
 ## v0.10.0 - 2026-09-07
 
+### Neue Funktionen
 
-### New Features
-* Teilstand sichtbar machen - Anzeige + gefuehrter Wizard
-* Teilstand ohne Login vervollstaendigen koennen
-* Ablesung ueber den Wizard unvollstaendig anlegen (Teilstand)
-* Store-Ebene fuer Teilstand - Preise nullable, Vollstaendigkeits-Query
-* Demo-Login-Einstiegspunkt ohne LOGIN_PASSWORD + Demo-Banner
-* Demo-Datenbank bei jedem Demo-Login zurueckgesetzt
-* Demo-Login schaltet auf separate, automatisch angelegte Demo-DB
-* Generator fuer 39 Monate realitaetsnahe Demo-Testdaten
-* optionales Login-Kennwort mit serverseitiger Berechtigungsdurchsetzung
+- Teilstand: Eine Ablesung lässt sich unvollständig speichern und später vervollständigen, auch ohne Anmeldung. Ein geführter Assistent zeigt, was noch fehlt
+- Optionales Login-Kennwort (`LOGIN_PASSWORD`): Ohne Anmeldung bleiben Ansehen und Erfassen von Ablesungen möglich, geschützt sind persönliche Angaben und Änderungen
+- Demo-Modus: Ein Login ohne Kennwort führt auf eine eigene Demo-Datenbank mit 39 Monaten Testdaten, mit Banner. Sie wird bei jedem Demo-Login zurückgesetzt
 
-### Bug Fixes
-* Abmelden-Link nicht mehr parallel zu Anmelden bei LOGIN_PASSWORD=""
-* Dashboard-Permissions korrigieren, Ablesung-Erfassung ohne Login erlauben
-* leeres Dashboard fehlte UpdateAvailable/LatestVersion im Template-Data
-* Login raeumt jeweils andere Session-Cookie symmetrisch ab
+### Fehlerkorrekturen
 
-### Refactoring
-* Demo/Echt-DB-Entscheidung als eigenen testbaren Seam extrahieren
-* secret als blosser String durch auth-Modul ersetzt
-* Nav-Fakten (Base/IsLoggedIn/IsDemoSession/ShowLoginEntry) in navData buendeln
-* DB-Auswahl je Request ueber Context statt fester NewMux-Variable
+- Der Link "Abmelden" erschien bei leerem Kennwort neben "Anmelden". Er erscheint nur noch, wenn man angemeldet ist
+- Rechte im Dashboard stimmen wieder: Eine Ablesung lässt sich auch ohne Anmeldung erfassen
+- Das leere Dashboard zeigt den Update-Hinweis wieder
+- Beim Anmelden wird der jeweils andere Sitzungs-Cookie sauber entfernt
+
+### Wartung
+
+- Die Preise einer Ablesung dürfen in der Datenbank leer sein, damit ein Teilstand gespeichert werden kann
+- Interne Aufräumarbeiten am Code ohne sichtbare Änderung
+
+Alle Änderungen im Vergleich: [v0.9.0...v0.10.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.9.0...v0.10.0)
 
 ## v0.9.0 - 2026-09-06
 
+### Neue Funktionen
 
-### New Features
-* Fixkosten-Formular - alle 14 Positionen editierbar, vererbt vom Vormonat
-* fixkosten_werte um logik/typ erweitern, Backfill aus Stammdaten-Jahren
-* Speichern-Buttons auf Stammdaten erst nach Aenderung aktivieren
-* PV-kWh-Zeile auf Wohnung-2-Karte (Nicht dem Netzbezug zugeordnet)
-* Guthaben/Nachzahlung-Anzeige und Abschlag-Reiter in HA-Widgets nachziehen
-* Nebenkostenabschlag mit Guthaben/Nachzahlung-Anzeige
+- Fixkosten-Formular: alle Positionen sind bearbeitbar mit Logik und Typ, die Werte kommen vom Vormonat
+- Nebenkostenabschlag mit Guthaben- und Nachzahlung-Anzeige im Dashboard und im Reiter "Abschlag" der Home-Assistant-Widgets
+- Auf der Karte von Wohnung 2 steht die Zeile "Nicht dem Netzbezug zugeordnet" (PV-kWh)
 
-### Bug Fixes
-* kein Zeilenumbruch zwischen Wert und Einheit (kWh/m²/m³/MWh/EUR)
-* kein Zeilenumbruch zwischen Wert und € bei EUR-Anzeigen
-* Nebenkostenabschlag auf Fixkosten-Detailseite anzeigen
-* Flurstuecksgroesse-Badge zeigt km² statt m² ab 1000 m²
-* Guthaben-Saldo ignoriert Monate ohne Fixkosten-Eingabe
-* Guthaben-Saldo bei luckenhaftem Monat, Abstandshalter-Position
+### Verbesserungen
 
-### Refactoring
-* Stammdaten-Kostenpositionen aufraeumen, kostenpositionen_jahre droppen
-* calc.Fixkosten liest Logik/Typ/Wert direkt aus der Eingabe
-* Jahr-Extraktion vereinheitlichen, abschlag-value-Block teilen
-* Saldo-Orchestrierung in buildEntityView buendeln
-* walkJahre durch generische gruppiereNachJahr ersetzen
-* Monatsverlauf-Markup zwischen Dashboard und Widgets teilen
-* AbschlagSaldo-Typ statt Betrag/Guthaben/Nachzahlung-Tripel
+- Die Speichern-Buttons der Stammdaten sind erst nach einer Änderung aktiv
 
-### Other Changes
-* revert: Flurstuecksgroesse km²-Umschaltung entfernen
+### Fehlerkorrekturen
+
+- Zwischen Wert und Einheit (kWh, m², m³, MWh) sowie vor dem Euro-Zeichen entsteht kein Zeilenumbruch mehr
+- Der Nebenkostenabschlag erscheint auf der Detailseite einer Fixkosten-Eingabe
+- Das Guthaben ignoriert Monate ohne Fixkosten-Eingabe und rechnet bei Lücken korrekt
+
+### Wartung
+
+- Die Fixkosten-Werte tragen jetzt Logik und Typ in der Datenbank. Bisherige Jahreswerte werden beim Start übernommen. Vorher eine Sicherung anlegen
+- Interne Aufräumarbeiten am Code ohne sichtbare Änderung
+
+Alle Änderungen im Vergleich: [v0.8.1...v0.9.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.8.1...v0.9.0)
 
 ## v0.8.1 - 2026-09-05
 
+### Wartung
 
-### Bug Fixes
-* HA-Add-on-DB-Pfad wechselt auf addon_configs, mit Migration
+- Das Home-Assistant-Add-on legt die Datenbank jetzt unter `addon_configs` ab. Eine vorhandene Datenbank wird beim Start dorthin übernommen
+
+Alle Änderungen im Vergleich: [v0.8.0...v0.8.1](https://github.com/larknafets/nebenkostenrechner/compare/v0.8.0...v0.8.1)
 
 ## v0.8.0 - 2026-09-05
 
+### Neue Funktionen
 
-### New Features
-* Update-Hinweis im Dashboard-Footer bei neuem GitHub-Release
-* Ablesungen einem Abrechnungsmonat zuordnen (#86)
-* kombinierte HA-Widget-Uebersicht (Jahressumme + Verbrauchswerte)
+- Ein Hinweis in der Fußzeile des Dashboards zeigt ein neues Release auf GitHub
+- Jede Ablesung lässt sich einem Abrechnungsmonat zuordnen (#86)
+- Kombinierte Widget-Übersicht für Home Assistant mit Jahressumme und Verbrauchswerten
 
-### Bug Fixes
-* Monatsverlauf-Balken nie ueber 100%, Nav-Ruecklink nur auf Detailseiten
-* Tausenderpunkt beim CSV-Import korrekt parsen (#87)
-* Container als nonroot-User statt root laufen lassen
+### Fehlerkorrekturen
 
-### Refactoring
-* handlers.go in Module aufteilen, Jahreszeile-Aggregation entdoppeln
+- Die Balken im Monatsverlauf überschreiten nie 100 %
+- Der Rücklink erscheint nur noch auf Detailseiten
+- Ein Tausenderpunkt wird beim CSV-Import richtig gelesen (#87)
+
+### Wartung
+
+- Der Container läuft als nonroot-Benutzer statt als root
+- Interne Aufräumarbeiten am Code ohne sichtbare Änderung
+
+Alle Änderungen im Vergleich: [v0.7.0...v0.8.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.7.0...v0.8.0)
 
 ## v0.7.0 - 2026-09-04
 
+### Neue Funktionen
 
-### New Features
-* Ingress-freie Widget-Routen fuer Home-Assistant-Dashboards
-* Icon-Badges fuer Wohnungsgroesse/Flurstueck/Personen, deutsches Tausendertrennzeichen
-* Verbrauchswerte auf genau 2 Nachkommastellen auffuellen
-* Flurstuecksgroesse-Badge und Personen-Schnitt auf Jahressummen-Karte anzeigen
-* Legende folgt aktivem Monatsverlauf-Modus, farbige Verbrauchswerte
-* Absolute Differenz zur vorherigen Ablesung in Zaehler-Tabelle anzeigen
+- Widget-Routen ohne Ingress, zum Einbinden in Home-Assistant-Dashboards
+- In der Zählertabelle steht die absolute Differenz zur vorherigen Ablesung
 
-### Bug Fixes
-* Tatsaechliche kWh in Dashboard-Verbrauchswerte statt PV-gedeckeltem abgerechnetem Anteil anzeigen
+### Verbesserungen
+
+- Icon-Badges für Wohnungsgröße, Flurstück und Personen sowie das deutsche Tausendertrennzeichen
+- Verbrauchswerte stehen immer mit genau zwei Nachkommastellen
+- Die Jahressummen-Karte zeigt Flurstücksgröße und Personen-Schnitt
+- Die Legende folgt dem aktiven Modus des Monatsverlaufs, die Verbrauchswerte sind farbig
+
+### Fehlerkorrekturen
+
+- Die Verbrauchswerte im Dashboard zeigen die tatsächlichen kWh statt des durch PV gedeckelten, abgerechneten Anteils
+
+Alle Änderungen im Vergleich: [v0.6.0...v0.7.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.6.0...v0.7.0)
 
 ## v0.6.0 - 2026-09-03
 
+### Verbesserungen
 
-### New Features
-* PV-Anteil in Wallboxen-Jahressummen-Karte anzeigen
-* Tatsaechliche kWh statt nur abgerechneter Werte in Dashboard-Verbrauchswerte/Wallbox anzeigen
+- Der PV-Anteil steht in der Jahressummen-Karte der Wallboxen
+- Verbrauchswerte und Wallbox zeigen die tatsächlichen kWh, nicht nur die abgerechneten Werte
+- Doppelte Kennzahlen-Boxen in den Tab-Ansichten des Dashboards sind entfernt
 
-### Refactoring
-* Redundante KPI-Strip-Boxen aus Dashboard-Tab-Panels entfernen
+### Wartung
+
+- Interne Aufräumarbeiten am Code ohne sichtbare Änderung
+
+Alle Änderungen im Vergleich: [v0.5.1...v0.6.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.5.1...v0.6.0)
 
 ## v0.5.1 - 2026-09-03
 
+### Fehlerkorrekturen
 
-### Bug Fixes
-* Fixkosten jaehrlich-Werte leer durch ungueltigen Zahlen-Input-Wert - behoben, veraltete Kostenposition-Labels synchronisiert
+- Jährliche Fixkosten-Werte blieben leer, wenn das Zahlenfeld einen ungültigen Wert enthielt. Die Bezeichnungen der Kostenpositionen sind abgeglichen
+
+Alle Änderungen im Vergleich: [v0.5.0...v0.5.1](https://github.com/larknafets/nebenkostenrechner/compare/v0.5.0...v0.5.1)
 
 ## v0.5.0 - 2026-09-03
 
+### Neue Funktionen
 
-### New Features
-* Wallbox/PV-Anlage Dashboard-Entitaeten ergaenzen, Seiten-Navigation vereinheitlichen (#67)
+- Wallbox und PV-Anlage erscheinen im Dashboard, die Seiten-Navigation ist vereinheitlicht (#67)
 
-### Refactoring
-* Wallbox/PV-Anlage Serien-Identitaet in simpleSeries buendeln
+### Wartung
+
+- Interne Aufräumarbeiten am Code ohne sichtbare Änderung
+
+Alle Änderungen im Vergleich: [v0.4.0...v0.5.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.4.0...v0.5.0)
 
 ## v0.4.0 - 2026-09-03
 
+### Neue Funktionen
 
-### New Features
-* Einheitliche obere Navigation auf jeder Seite (Prototyp-Stil)
-* Dashboard mit Jahressummen und 4-Modus-Monatsverlauf neu gestalten (#60)
-* Kostenpositionen-Jahre auf /stammdaten verwalten (#60)
-* /fixkosten CRUD ergaenzen (#60)
-* Fixkosten-Aufteilungsberechnung ergaenzen (#60)
-* Fixkosten-Datenmodell ergaenzen (#60)
-* Stammdaten-Seite fuer Wohnungsgroesse/Flurstuecksgroesse ergaenzen (#61)
+- Neues Dashboard mit Jahressummen und einem Monatsverlauf in vier Modi (#60)
+- Fixkosten: Seite `/fixkosten` zum Anlegen, Ändern und Löschen, mit Aufteilung der Kosten auf beide Wohnungen (#60)
+- Neue Stammdaten-Seite für Wohnungsgröße und Flurstücksgröße (#61)
+- Einheitliche obere Navigation auf jeder Seite
 
-### Bug Fixes
-* Monatsverlauf-Balkensegmente/-Text blieben in jedem Modus unsichtbar - behoben
-* Waermepumpe-Strom kWh je Wohnung in Heizungskosten-Tabelle aufteilen
+### Verbesserungen
 
-### Refactoring
-* Code-Review-Befunde zu #60 adressieren
-* Stammdaten-Formular-Parsing entdoppeln, auf Wohnflaeche-Wortwahl vereinheitlichen
+- Der Strom der Wärmepumpe wird in der Heizungskosten-Tabelle je Wohnung aufgeteilt
+
+### Wartung
+
+- Neue Tabellen in der Datenbank für die Fixkosten
+- Interne Aufräumarbeiten am Code ohne sichtbare Änderung
+
+Alle Änderungen im Vergleich: [v0.3.0...v0.4.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.3.0...v0.4.0)
 
 ## v0.3.0 - 2026-09-01
 
+### Wartung
 
-### Other Changes
-* hassio-Release-Job auf den umbenannten ha-addons-Slug umstellen (#52)
-* Projekt umbenennen: nebenkosten-energierechner -> nebenkostenrechner (#51)
+- Das Projekt heißt jetzt "nebenkostenrechner" (vorher "nebenkosten-energierechner"). Das Home-Assistant-Add-on bekam dabei einen neuen Slug (#51, #52)
+
+Alle Änderungen im Vergleich: [v0.2.2...v0.3.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.2.2...v0.3.0)
 
 ## v0.2.2 - 2026-09-01
 
+### Neue Funktionen
 
-### Other Changes
-* Zeitraum neben Ablesedatum in Uebersicht und Detail-Dropdown anzeigen
-* CSV-Export (#53) und Bootstrap-CSV-Import (#54) fuer Ablesungen ergaenzen
-* WP-Strom kWh in Heizungskosten und PV-Anteil in Stromkosten anzeigen (#50)
+- CSV-Export (#53) und CSV-Import zum Start (#54) für Ablesungen
+
+### Verbesserungen
+
+- Der Zeitraum steht neben dem Ablesedatum in der Übersicht und in der Auswahl der Detailseite
+- Die Heizungskosten zeigen den Wärmepumpen-Strom in kWh, die Stromkosten den PV-Anteil (#50)
+
+Alle Änderungen im Vergleich: [v0.2.1...v0.2.2](https://github.com/larknafets/nebenkostenrechner/compare/v0.2.1...v0.2.2)
 
 ## v0.2.1 - 2026-09-01
 
+### Fehlerkorrekturen
 
-### Other Changes
-* UpdatePeriod verwirft bei Luecken still Zaehlerstaende und Belegung - behoben
+- Beim Korrigieren einer Ablesung gingen bei Lücken stillschweigend Zählerstände und Belegung verloren
+
+Alle Änderungen im Vergleich: [v0.2.0...v0.2.1](https://github.com/larknafets/nebenkostenrechner/compare/v0.2.0...v0.2.1)
 
 ## v0.2.0 - 2026-09-01
 
+### Neue Funktionen
 
-### Other Changes
-* Docker/HA-Add-on-Installationsabschnitt im README ergaenzen, Tech-Stack aktualisieren
-* Ablesung-Korrektur Datums-Nachbar-Pruefung nach store.UpdatePeriod verschoben
-* System/Hell/Dunkel-Theme-Umschalter und Dashboard-Versions-Badge ergaenzen (#48, #49)
-* Einspeisung (PV-Einspeisung) im README und auf der Berechnungslogik-Seite dokumentieren
+- Der Umschalter für das Farbschema bietet System, Hell und Dunkel, im Dashboard steht ein Versions-Badge (#48, #49)
+
+### Verbesserungen
+
+- Die Seite "Wie wird gerechnet?" erklärt die PV-Einspeisung
+
+Alle Änderungen im Vergleich: [v0.1.5...v0.2.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.1.5...v0.2.0)
 
 ## v0.1.5 - 2026-09-01
 
+### Neue Funktionen
 
-### Other Changes
-* Fehlende Preis-/Personen-Vorbelegung bei Korrektur der aeltesten Ablesung behoben, Einspeisung-Tracking ergaenzt (#47)
+- Die Einspeisung ins Netz wird erfasst (#47)
+
+### Fehlerkorrekturen
+
+- Beim Korrigieren der ältesten Ablesung fehlten Preise und Personenzahl in der Vorbelegung (#47)
+
+Alle Änderungen im Vergleich: [v0.1.4...v0.1.5](https://github.com/larknafets/nebenkostenrechner/compare/v0.1.4...v0.1.5)
 
 ## v0.1.4 - 2026-09-01
 
+### Neue Funktionen
 
-### Other Changes
-* "Neue Ablesung erfassen" und "korrigieren" zu Buttons machen, "Wie wird gerechnet?" auf Dashboard beschraenken (#46)
-* Zeitraum auf Ablesung-Detail anzeigen, Nav-Link-Groessen vereinheitlichen, Dashboard-Link umbenennen
-* Bearbeiten/Loeschen beliebiger Ablesungen erlauben, Ablesungen-Uebersicht ergaenzen (#41, #43, #44, #45)
+- Jede Ablesung lässt sich bearbeiten und löschen, eine Übersicht listet alle Ablesungen (#41, #43, #44, #45)
+
+### Verbesserungen
+
+- "Neue Ablesung erfassen" und "Korrigieren" sind Buttons, "Wie wird gerechnet?" steht nur noch im Dashboard (#46)
+- Die Detailansicht zeigt den Zeitraum, die Navigations-Links sind einheitlich groß
+
+Alle Änderungen im Vergleich: [v0.1.3...v0.1.4](https://github.com/larknafets/nebenkostenrechner/compare/v0.1.3...v0.1.4)
 
 ## v0.1.3 - 2026-09-01
 
+### Verbesserungen
 
-### Other Changes
-* Beliebige Nachkommastellen-Genauigkeit in Ablesung-Formularfeldern erlauben
+- Die Formularfelder der Ablesung erlauben beliebig viele Nachkommastellen
+
+Alle Änderungen im Vergleich: [v0.1.2...v0.1.3](https://github.com/larknafets/nebenkostenrechner/compare/v0.1.2...v0.1.3)
 
 ## v0.1.2 - 2026-09-01
 
+### Neue Funktionen
 
-### Other Changes
-* Container als root statt distroless nonroot laufen lassen
-* Verbrauch auf max. 2 Nachkommastellen runden, EUR immer auf 2 auffuellen, QM-Seed nicht mehr hartkodiert (#37, #38, #40)
-* Festen Tooltip fuer zu schmale Verlauf-Balkensegmente ergaenzen, die den EUR-Text nicht zeigen koennen
-* Verlauf EUR/Verbrauch-Umschalter ergaenzen (#39)
-* Ablesung-Korrektur, Dashboard-Link und deutsche Zahlenformate ergaenzen (#34, #35, #36)
+- Der Verlauf lässt sich zwischen Euro und Verbrauch umschalten (#39)
+- Ablesungen lassen sich korrigieren, das Dashboard hat einen Link, Zahlen erscheinen im deutschen Format (#34, #35, #36)
+
+### Verbesserungen
+
+- Der Verbrauch wird auf höchstens zwei Nachkommastellen gerundet, Euro-Beträge haben immer zwei (#37, #38, #40)
+- Die Wohnungsgröße ist nicht mehr fest einprogrammiert
+- Ein fester Tooltip erscheint bei Balkenstücken, die zu schmal für den Euro-Text sind
+
+### Wartung
+
+- Der Container läuft als root statt als nonroot-Benutzer der Distroless-Basis
+
+Alle Änderungen im Vergleich: [v0.1.1...v0.1.2](https://github.com/larknafets/nebenkostenrechner/compare/v0.1.1...v0.1.2)
 
 ## v0.1.1 - 2026-08-29
 
+### Neue Funktionen
 
-### Other Changes
-* HA-Add-on-Repo (larknafets/ha-addons) bei Release aktualisieren
-* GoReleaser-Changelog/Release-Schritt ergaenzen, angelehnt an gcs-connector-evcc
+- Erste veröffentlichte Version: monatliche Ablesungen erfassen und die Kosten für Strom, Heizung und Wasser auf zwei Wohnungen verteilen, als Home-Assistant-Add-on
+
+### Wartung
+
+- Das Add-on-Repository `larknafets/ha-addons` wird bei jedem Release automatisch aktualisiert
 
