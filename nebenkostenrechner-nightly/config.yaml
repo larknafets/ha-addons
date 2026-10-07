@@ -1,5 +1,5 @@
 name: Nebenkosten (Nightly)
-version: "nightly.20261006-03bd772"
+version: "nightly.20261007-421877d"
 slug: nebenkostenrechner-nightly
 stage: experimental
 description: Nightly-Stand von main - Monatliche Nebenkostenabrechnung für ein Zweifamilienhaus mit Wärmepumpe und PV-Anlage
