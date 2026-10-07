@@ -12,7 +12,7 @@ GitHub Issues via `gh` CLI (larknafets/ha-addons). See `docs/agents/issue-tracke
 
 ### Domain docs
 
-Single-context: root `CONTEXT.md` + `docs/adr/`. See `docs/agents/domain.md`.
+Single-context: root `GLOSSARY.md` + `docs/adr/`. See `docs/agents/domain.md`.
 
 ## Plan mode
 
