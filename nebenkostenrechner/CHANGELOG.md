@@ -2,6 +2,20 @@
 
 Alle Release-Details: https://github.com/larknafets/nebenkostenrechner/releases
 
+## v0.17.0 - 2026-10-18
+
+
+### Verbesserungen
+
+- Ablesung: Die Auswahl "Andere Ablesung anzeigen" zeigt jetzt den zugeordneten Monat und in Klammern das Ablesedatum (z. B. "August 2026 (15.08.2026)")
+
+### Fehlerkorrekturen
+
+- Dashboard: Der Personen-Schnitt der Jahressumme ist jetzt das Mittel der Personenzahlen aller Fixkosten-Eingaben des Jahres (ein Wert je Monat, z. B. 1,25). Vorher kam er aus den Ablesungen und zählte jede Ablesung gleich, auch mehrere im selben Monat
+
+
+Alle Änderungen im Vergleich: [v0.16.0...v0.17.0](https://github.com/larknafets/nebenkostenrechner/compare/v0.16.0...v0.17.0)
+
 ## v0.16.0 - 2026-10-14
 
 
