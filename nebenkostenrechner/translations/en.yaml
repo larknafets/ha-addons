@@ -7,7 +7,3 @@ configuration:
       visitors only see restricted, read-only views; logging in unlocks
       all editing features. Leave empty (default) to disable the login
       entirely.
-network:
-  8081/tcp: >-
-    Read-only widget routes for Lovelace webpage-card iframes,
-    no login required - see documentation
