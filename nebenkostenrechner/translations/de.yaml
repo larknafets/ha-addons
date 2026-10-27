@@ -5,8 +5,6 @@ configuration:
     description: >-
       Optional per Kennwort absichern. Der Vermieter sieht und darf
       alles. Ohne Kennwort ist die App offen und jeder ist Vermieter.
-      Ersetzt das frühere Login-Kennwort und muss nach dem Update neu
-      gesetzt werden.
   mieter_password:
     name: Mieter-Kennwort
     description: >-
