@@ -1,9 +1,16 @@
 ---
 configuration:
-  login_password:
-    name: Login-Kennwort
+  vermieter_password:
+    name: Vermieter-Kennwort
     description: >-
-      Optional per Kennwort absichern. Ohne Kennwort sehen Besucher nur
-      eingeschränkte, lesende Ansichten; nach Login sind alle
-      Bearbeitungsfunktionen freigeschaltet. Leer lassen (Standard)
-      deaktiviert den Login komplett.
+      Optional per Kennwort absichern. Der Vermieter sieht und darf
+      alles. Ohne Kennwort ist die App offen und jeder ist Vermieter.
+      Ersetzt das frühere Login-Kennwort und muss nach dem Update neu
+      gesetzt werden.
+  mieter_password:
+    name: Mieter-Kennwort
+    description: >-
+      Optional, ein Login für den Mieter. Was der Mieter sieht und tut,
+      stellt der Vermieter in den Stammdaten unter Berechtigungen ein.
+      Wirkt nur zusammen mit dem Vermieter-Kennwort. Leer lassen
+      (Standard) für keinen Mieter-Login.
