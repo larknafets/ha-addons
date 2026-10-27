@@ -5,8 +5,7 @@ configuration:
     description: >-
       Optionally protect access with a password. The landlord sees and
       may do everything. Without a password the app is open and everyone
-      is landlord. Replaces the former login password and has to be set
-      again after the update.
+      is landlord.
   mieter_password:
     name: Tenant Password
     description: >-
