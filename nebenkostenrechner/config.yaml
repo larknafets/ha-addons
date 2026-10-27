@@ -15,9 +15,11 @@ map:
 environment:
   DB_PATH: /config/nebenkosten.db
 options:
-  login_password: ""
+  vermieter_password: ""
+  mieter_password: ""
 schema:
-  login_password: password?
+  vermieter_password: password?
+  mieter_password: password?
 ingress: true
 ingress_port: 8080
 panel_title: "Nebenkosten"
