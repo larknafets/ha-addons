@@ -26,6 +26,7 @@ Single-context: root `GLOSSARY.md` + `docs/adr/`. See `docs/agents/domain.md`.
 ## Git rules
 
 - **Author identity**: Always use the name and email already configured for the GitHub account in use (`git config user.name` / `user.email`, or the target repo's existing committer identity). Never assume, guess, or substitute a different identity (e.g. a system/session email) for commit author or committer.
+- **Signing**: every commit and tag is SSH-signed (`commit.gpgsign`, `tag.gpgsign`, `gpg.format=ssh`, set globally). Never use `--no-gpg-sign`, create tags with `git tag -s` (no lightweight tags).
 - **Commit messages**: `docs/agents/git-commit-messages.md`
 
 ## Language convention
