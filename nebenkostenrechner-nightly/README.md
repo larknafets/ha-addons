@@ -1,5 +1,10 @@
 # Nebenkostenrechner (Nightly)
 
-Täglicher Stand von `main` des [nebenkostenrechner](https://github.com/larknafets/nebenkostenrechner), zum Ausprobieren. **Experimentell:** kann Fehler enthalten und Datenbank-Migrationen, die der Release-Add-on nicht kennt.
+Dieses Add-on enthält den jeweils neuesten Stand von `main` des [nebenkostenrechner](https://github.com/larknafets/nebenkostenrechner). Die Version heißt `nightly.JJJJMMTT-<Commit>`. Ein Workflow baut sie jede Nacht, wenn es in den letzten 24 Stunden einen Commit gab, und aktualisiert dann diese Add-on-Konfiguration. Die letzten 7 Images bleiben erhalten.
 
-Eigene Daten - läuft parallel zum Add-on "Nebenkosten". Siehe [Dokumentation](DOCS.md).
+Bedienung und Login sind wie beim Add-on "Nebenkosten", siehe dessen [Dokumentation](../nebenkostenrechner/DOCS.md).
+
+## Unterschiede zum Release
+
+- **Eigene Daten:** Die Datenbank liegt im eigenen Add-on-Ordner unter `/addon_configs/<repo>_nebenkostenrechner-nightly`. Der Release-Add-on bleibt unberührt, ein Wechsel nimmt aber auch keine Daten mit.
+- **Nie zurückkopieren:** Der Nightly kann die Datenbank auf ein neueres Schema bringen. Die Datenbank des Nightly nicht in den Release-Add-on kopieren.
