@@ -8,4 +8,3 @@ Bedienung und Login sind wie beim Add-on "Nebenkosten", siehe dessen [Dokumentat
 
 - **Eigene Daten:** Die Datenbank liegt im eigenen Add-on-Ordner unter `/addon_configs/<repo>_nebenkostenrechner-nightly`. Der Release-Add-on bleibt unberührt, ein Wechsel nimmt aber auch keine Daten mit.
 - **Nie zurückkopieren:** Der Nightly kann die Datenbank auf ein neueres Schema bringen. Die Datenbank des Nightly nicht in den Release-Add-on kopieren.
-- **Sichern:** Wer Daten aus dem Nightly behalten will, exportiert sie als CSV (Ablesungen, Fixkosten, Sonderkosten) und notiert die Stammdaten, sie sind nicht im CSV enthalten.
