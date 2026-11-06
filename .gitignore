@@ -1,10 +1,17 @@
 /dist/
 
-# Claude Code project settings/state - local to this machine, never shared
-/.claude/
-
 # local dev artifacts
 *.db
 *.log
 .env
+.env.local
 .DS_Store
+
+# Trail-Code - local to this machine, never shared
+/.trail/
+/graft/
+.ignore
+
+# Claude Code project settings/state - local to this machine, never shared
+.mcp.json
+/.claude/
