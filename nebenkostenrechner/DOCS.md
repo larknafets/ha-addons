@@ -1,6 +1,6 @@
 # Nebenkostenrechner
 
-Web-App zur monatlichen Nebenkostenabrechnung für ein Zweifamilienhaus mit Wärmepumpe und PV-Anlage. Berechnet Strom-, Heizung/Warmwasser- und Wasserkosten, Fixkosten und Abschlag je Wohnung aus monatlich erfassten Zählerständen/Eingaben.
+Web-App zur monatlichen Nebenkostenabrechnung für ein Zweifamilienhaus mit Wärmepumpe und PV-Anlage. Berechnet Strom-, Heizung/Warmwasser- und Wasserkosten, Fixkosten, Sonderkosten und Abschlag je Wohnung aus monatlich erfassten Zählerständen/Eingaben.
 
 Dieses Add-on wrappt [nebenkostenrechner](https://github.com/larknafets/nebenkostenrechner). Alle Eingaben erfolgen direkt in der App über den Ablese-Wizard - keine Optionen in diesem Tab nötig.
 
